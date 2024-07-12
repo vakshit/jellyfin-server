@@ -1,0 +1,13 @@
+name: server 
+
+networks:
+  intranet:
+    name: intranet
+    external: true
+    driver: bridge
+
+include:
+  - path: jellyfin/docker-compose.yml     # 5004
+  - path: nginx/docker-compose.yml 
+  - path: cloudflared/docker-compose.yml
+  
